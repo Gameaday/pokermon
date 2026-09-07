@@ -12,10 +12,10 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v4
       with:
         cmdline-tools-version: 9477386
     
@@ -29,7 +29,7 @@ jobs:
         echo "✅ Android SDK components installed"
     
     - name: Cache Gradle packages
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: |
           ~/.gradle/caches
